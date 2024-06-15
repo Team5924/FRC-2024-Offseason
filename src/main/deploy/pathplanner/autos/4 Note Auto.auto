@@ -1,0 +1,181 @@
+{
+  "version": 1.0,
+  "startingPose": {
+    "position": {
+      "x": 1.45,
+      "y": 5.55
+    },
+    "rotation": 0
+  },
+  "command": {
+    "type": "sequential",
+    "data": {
+      "commands": [
+        {
+          "type": "named",
+          "data": {
+            "name": "setGyro0"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.05
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "intakeAndRev"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "setIntakeStateFloorWithoutOtherStuff"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Start to Close B with Shoot"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.7
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Close B to Close Shot"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "setFeederStateFeedShooter"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.25
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "prepareForIntake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Close Shot to Close C"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Back Off from Close C"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.7
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "closeShotAndRev"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "setIntakeStateRetract"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Back Off from Close C to Close Shot"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "setFeederStateFeedShooter"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.25
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "prepareForIntake"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Close Shot to Close A"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 1.35
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "setIntakeStateRetract"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "aimAndRev"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Close A to Shoot (4N)"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "setFeederStateFeedShooter"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.25
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "prepareForIntake"
+          }
+        }
+      ]
+    }
+  },
+  "folder": null,
+  "choreoAuto": false
+}
